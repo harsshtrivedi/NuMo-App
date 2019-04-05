@@ -7,37 +7,23 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="message.js"></script> 
-<script>
-function check(mobile){
-    var mobilenumber = (""+mobile).split("");
-    if(mobilenumber.length!=10){
-        alert("Enterred Mobile Number: "+mobile+"is not 10 Digits");
-    } else{
-        single(mobilenumber);
-    }
-}
-
-function single(mobilenumber){
-var mobilesum = 0;
-for(var i=0; i<mobilenumber.length;i++){
-    mobilesum += parseInt(mobilenumber[i]);
-}
-var mobilenumber = (""+mobilesum).split("");
-if(mobilenumber.length>1){
-    single(mobilenumber);
-}else{
-    alert("Sum is: "+mobilesum); exit;
-}
-}
-</script>
-
+        <script type="text/javascript" src="numo.js"></script>
 </head>
 <body>
         <div class="container">
-Mobile Number: <input type="number" name="mobile" id="mobile"></input>
-<input type="button" name="Click" id="click" onClick="check(document.getElementById('mobile').value)"></input>
-<p id="display">Display Value</p>
+            <div class="row">
+                
+                <div class="col-sm-4 align-right">
+                    <span>Name: </span><br>
+                    <span>Mobile Number: </span><br>
+                </div>
+                <div class="col-sm-4">
+                        <input type="text" name="name" id="name"></input><br>
+                        <input type="number" name="mobile" id="mobile"></input><br>
+                        <input type="button" name="Click" id="click" onClick="check(document.getElementById('mobile').value,(document.getElementById('name').value))" value="Click" ></input>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
 </div>
 </body>
 </html>
