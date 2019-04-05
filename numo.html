@@ -12,16 +12,22 @@
 <body>
         <div class="container">
             <div class="row">
-                
-                <div class="col-sm-4 align-right">
+                    <div class="col-sm-3">
+
+                    </div>
+                <div class="col-sm-2">
                     <span>Name: </span><br>
-                    <span>Mobile Number: </span><br>
+                    <span>Mobile: </span><br>
+                    <span>City: </span><br>
                 </div>
-                <div class="col-sm-4">
-                        <input type="text" name="name" id="name"></input><br>
-                        <input type="number" name="mobile" id="mobile"></input><br>
+                <div class="col-sm-3">
+                    <form>
+                        <input type="text" name="name" id="name" value="Name" onfocus="this.value=''"></input><br>
+                        <input type="number" name="mobile" id="mobile" value="0123456789" onfocus="this.value=''"></input><br>
+                        <input type="text" name="city" id="city" value="City" onfocus="this.value=''"></input><br>
                         <input type="button" name="Click" id="click" onClick="check(document.getElementById('mobile').value,(document.getElementById('name').value))" value="Click" ></input>
-                        
+                        <p id="disp">value</p>
+                    </form>
                     </div>
                 <div class="col-sm-4"></div>
             </div>

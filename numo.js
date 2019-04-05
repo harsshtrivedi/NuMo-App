@@ -49,5 +49,5 @@ for(i=0;i<personname.length;i++){
     }
     }
     single(namearray);
-    
+ 
 }
